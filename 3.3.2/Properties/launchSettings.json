@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "3.3.2": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {},
+      "distributionName": ""
+    }
+  }
+}
