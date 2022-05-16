@@ -9,13 +9,13 @@ namespace _4._5.x
             (string name, string last_name, string login, int login_count, bool has_pet, int age, string[] fav_colors) User;
 
 
-            Console.Write("Enter you'r name: ");
+            Console.Write("Enter your name: ");
             User.name = Console.ReadLine();
 
             Console.Write("Enter you'r last name: ");
             User.last_name = Console.ReadLine();
 
-            Console.Write("Enter you'r login: ");
+            Console.Write("Enter your login: ");
             User.login = Console.ReadLine();
             User.login_count = User.login.Length;
 
@@ -39,6 +39,14 @@ namespace _4._5.x
                     User.has_pet = false;
                     break;
             }
+
+            Console.Write("Enter yorr age: ");
+            User.age= checked((byte)int.Parse(Console.ReadLine()));
+
+            User.fav_colors = new string[3];
+            Console.WriteLine("Enter 3 of your favotite colors:");
+            for (int i = 0; i < User.fav_colors.Length; i++)
+                User.fav_colors[i] = Console.ReadLine();
         }
     }
 }
