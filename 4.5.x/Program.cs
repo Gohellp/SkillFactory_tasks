@@ -6,7 +6,7 @@ namespace _4._5.x
     {
         static void Main(string[] args)
         {
-            (string name, string last_name, string login, string count_login, bool has_pet, int age, string[] fav_colors) User;
+            (string name, string last_name, string login, int login_count, bool has_pet, int age, string[] fav_colors) User;
 
             Console.Write("Enter you'r name: ");
             User.name = Console.ReadLine();
@@ -16,6 +16,7 @@ namespace _4._5.x
 
             Console.Write("Enter you'r login: ");
             User.login = Console.ReadLine();
+            User.login_count = User.login.Length;
         }
     }
 }
