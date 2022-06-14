@@ -1,22 +1,21 @@
 ﻿using System;
 
-namespace _5._1._8
+namespace _5._2._17
 {
     class Program
     {
-        static int[] GetArrayFromConsole()
+        static int[] ShowArray(int[] arr, bool must_sort = false)
         {
-            var result = new int[5];
-
-            for (int i = 0; i < result.Length; i++)
+            if (must_sort)
             {
-                Console.WriteLine("Введите элемент массива номер {0}", i + 1);
-                result[i] = int.Parse(Console.ReadLine());
+                arr = SortArray(arr);
             }
 
-            return result;
+            foreach(int num in arr)
+            {
+                Console.WriteLine(num);
+            }
         }
-
         static int[] SortArray(int[] arr)
         {
             int temp;
@@ -35,14 +34,9 @@ namespace _5._1._8
             }
             return arr;
         }
-        static void Main()
+        static void Main(string[] args)
         {
-            int[] array = SortArray(GetArrayFromConsole());
-
-            foreach (var item in array)
-            {
-                Console.WriteLine(item);
-            }
+            
         }
     }
 }
