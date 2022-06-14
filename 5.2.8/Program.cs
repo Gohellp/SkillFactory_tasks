@@ -16,9 +16,9 @@ namespace _5._1._6
 
             return result;
         }
-        static void Main()
+
+        static int[] SortArray(int[] arr)
         {
-            int[] arr = GetArrayFromConsole();
             int temp;
 
             for (int i = 0; i < arr.Length; i++)
@@ -33,8 +33,13 @@ namespace _5._1._6
                     }
                 }
             }
+            return arr;
+        }
+        static void Main()
+        {
+            int[] array = SortArray(GetArrayFromConsole());
 
-            foreach (var item in arr)
+            foreach (var item in array)
             {
                 Console.WriteLine(item);
             }
